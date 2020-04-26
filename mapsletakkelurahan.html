@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="CodePixar">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+      <title>SISPENASI</title>
+      <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+      <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/jquery.DonutWidget.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/style.css">
+			
+			
+		</head>
+		<body>
+
+			<!-- Start Header Area -->
+			<header class="default-header">
+				<nav class="navbar navbar-expand-lg  navbar-light">
+					<div class="container">
+						  <a class="navbar-brand" href="index.html">
+						  	<img src="img/logo.jpg" alt="image" height="43" width="45">
+						  </a>
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						    <span class="navbar-toggler-icon"></span>
+						  </button>
+
+						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+						    <ul class="navbar-nav">
+								<li><a href="index.php">Beranda</a></li>
+								<li><a href="../login/signin.php">Masuk</a></li>
+								<li><a href="#contact">Kontak</a></li>
+								
+							   <!-- Dropdown -->
+							    <li class="dropdown">
+							      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							        Pelayanan
+							      </a>
+							      <div class="dropdown-menu">
+								  <a class="dropdown-item" href="#project">Kegiatan Dokumentasi</a>
+									<a class="dropdown-item" href="umum.html">Pelayanan Umum</a>
+									<a class="dropdown-item" href="pepemas.html">Pelayanan Pemberdayaan Masyarakat</a>
+									<a class="dropdown-item" href="pelkeban.html">Pelayanan Ketentraman dan Ketertiban</a>
+								  </div>
+								</li>
+								<li class="dropdown">
+								  <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							        Data Wilayah
+							      </a>
+								  <div class="dropdown-menu">
+									<a class="dropdown-item" href="geografi.html">Kondisi Geografi</a>
+									<a class="dropdown-item" href="infra.html">Infrastruktur</a>
+									<a class="dropdown-item" href="covid.html">Info Covid-19</a>
+							      </div>
+								</li>	
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+									  Tentang Kami
+									</a>
+									<div class="dropdown-menu">
+									  <a class="dropdown-item" href="visi.html">Visi Dan Misi</a>
+									  <a class="dropdown-item" href="#contact">Hubungi</a>
+									  <a class="dropdown-item" href="tugasfungsi.html">Tugas Fungsi</a>
+									</div>
+								  </li>	
+								  
+								  			
+						    </ul>
+						  </div>						
+					</div>
+				</nav>
+			</header>
+      <title>Maps</title>
+      <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+      <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <div id = "map" style = "width: 600px; height: 450px"></div>
+      <script>
+         // Creating map options
+         var mapOptions = {
+            center: [-6.208725, 106.733784],
+            zoom: 10
+         }
+         
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+         //Creating Marker
+         var marker = L.marker([-6.21445, 106.736332]);
+         
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+         
+         
+         // Adding layer to the map
+         marker.bindPopup('Kelurahan Meruya Selatan').openPopup();
+         map.addLayer(layer);
+         marker.addTo(map);
+      </script>
+   </body>
+   
+</html>
